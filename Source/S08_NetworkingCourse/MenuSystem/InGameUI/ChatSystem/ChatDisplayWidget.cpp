@@ -1,9 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "ChatDisplayWidget.h"
-#include "MenuSystem/InGameUI/ChatSystem/ChatDisplayTab.h"
+#include "S08_NetworkingCourse/MenuSystem/InGameUI/ChatSystem/ChatDisplayTab.h"
 #include "Components/ScrollBox.h"
-#include "ConstructorHelpers.h"
 
 #include "Components/TextBlock.h"
 #include "Components/Border.h"

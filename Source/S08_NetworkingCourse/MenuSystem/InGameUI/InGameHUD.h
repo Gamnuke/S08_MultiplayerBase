@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
-#include "UnrealNetwork.h"
+#include "Net/UnrealNetwork.h"
 #include "InGameHUD.generated.h"
 
 class UVerticalBox;

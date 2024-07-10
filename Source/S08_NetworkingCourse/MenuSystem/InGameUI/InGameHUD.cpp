@@ -1,19 +1,17 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "InGameHUD.h"
-#include "ConstructorHelpers.h"
-#include "MenuSystem/InGameUI/ChatSystem/ChatTab.h"
 
 #include "Components/VerticalBox.h"
 #include "Components/ScrollBox.h"
 #include "Components/Border.h"
 #include "Components/EditableText.h"
 
-#include "UnrealNetwork.h"
-#include "GamePlayerController.h"
-#include "NetworkGameState.h"
+#include "S08_NetworkingCourse/Player/GamePlayerController.h"
+#include "S08_NetworkingCourse/Player/MainCharacter.h"
+#include "S08_NetworkingCourse/MenuSystem/InGameUI/ChatSystem/ChatTab.h"
 
-#include "Gameplay/MainCharacter.h"
+#include "Net/UnrealNetwork.h"
 #include "Engine/Engine.h"
 #include "GameFramework/PlayerState.h"
 
@@ -50,9 +48,9 @@ void UInGameHUD::NativeTick(const FGeometry& MyGeometry, float DeltaTime)
 		TargetOpacity = 1;
 		TextInput->SetKeyboardFocus();
 	}
-	FLinearColor Color = FadeBorder->ContentColorAndOpacity;
+	FLinearColor Color = FadeBorder->GetContentColorAndOpacity();
 	Color.A = FMath::FInterpTo(
-		FadeBorder->ContentColorAndOpacity.A,
+		FadeBorder->GetContentColorAndOpacity().A,
 		TargetOpacity,
 		DeltaTime,
 		5

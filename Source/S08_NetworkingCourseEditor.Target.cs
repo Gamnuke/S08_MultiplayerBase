@@ -7,7 +7,9 @@ public class S08_NetworkingCourseEditorTarget : TargetRules
 {
 	public S08_NetworkingCourseEditorTarget(TargetInfo Target) : base(Target)
 	{
-		Type = TargetType.Editor;
-		ExtraModuleNames.Add("S08_NetworkingCourse");
-	}
+        Type = TargetType.Editor;
+        DefaultBuildSettings = BuildSettingsVersion.V4;
+        IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_3;
+        ExtraModuleNames.Add("S08_NetworkingCourse");
+    }
 }
